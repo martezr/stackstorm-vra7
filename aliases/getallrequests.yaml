@@ -3,5 +3,19 @@ name: "get_all_requests"
 pack: "vra7"
 description: "Get all requests"
 action_ref: "vra7.get_all_requests"
+ack:
+  enabled: false
 formats:
   - "get all vra7 requests"
+result:
+  format: |
+    {% if execution.status == 'succeeded' %}
+    {% for item in execution.result.result %}
+    Request: {{item.requestNumber}}  
+    State:   {{item.state}}  
+    Item:    {{item.requestedItemName}}
+
+    {% endfor %}
+    {% else %}
+    {{execution.result.stdout}}{~}
+    {% endif %}

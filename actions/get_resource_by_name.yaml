@@ -1,0 +1,11 @@
+---
+name: "get_resource_by_name"
+runner_type: "run-python"
+description: "Get resource by name"
+enabled: true
+entry_point: "get_resource_by_name.py"
+parameters:
+  resourceName:
+    type: "string"
+    description: "Name of the resource to retrieve"
+    required: true
