@@ -1,3 +1,4 @@
+from vraapiclient import catalog
 from st2actions.runners.pythonrunner import Action
 
 class vRealizeAutomationAction(Action):
@@ -7,10 +8,10 @@ class vRealizeAutomationAction(Action):
         self.vra7 = self._get_client()
 
     def _get_client(self):
-        url = self.config['url']
+        url = self.config['hostname']
         username = self.config['username']
         password = self.config['password']
         tenant = self.config['tenant']
 
-        client = catalog.ConsumerClient(url, username, password, tenant)
+        client = catalog.ConsumerClient(hostname, username, password, tenant)
         return client
