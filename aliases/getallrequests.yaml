@@ -1,0 +1,7 @@
+---
+name: "get_all_requests"
+pack: "vra7"
+description: "Get all requests"
+action_ref: "vra7.get_all_requests"
+formats:
+  - "get all vra7 requests"
