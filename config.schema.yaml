@@ -1,0 +1,28 @@
+---
+  url:
+    description: "FQDN to vRealize Automation 7 API endpoint (e.x.: https://vrealize.mycompany.org)"
+    type: "string"
+    secret: false
+    required: true
+  username:
+    description: "vRealize Automation 7 user account username"
+    type: "string"
+    secret: false
+    required: true
+  password:
+    description: "vRealize Automation 7 user account password"
+    type: "string"
+    secret: true
+    required: true
+  tenant:
+    description: "vRealize Automation 7 tenant (Defaults to vsphere.local if not supplied)"
+    type: "string"
+    secret: false
+    required: false
+    default: "vsphere.local"
+  verify_ssl:
+    description: "Whether ST2 should verify the vRealize Automation 7 API endpoint"
+    type: "boolean"
+    secret: false
+    required: false
+    default: true

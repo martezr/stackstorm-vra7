@@ -1,0 +1,11 @@
+---
+ref: vra7
+name: vRealize Automation 7
+description: VMware vRealize Automation 7 integration pack.
+keywords:
+    - vra7
+    - vrealize automation
+    - vmware
+version: 0.1.0
+author: Martez Reed
+email: martez.reed@greenreedtech.com

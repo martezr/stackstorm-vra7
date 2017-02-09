@@ -1,0 +1,6 @@
+---
+name: get_all_requests
+runner_type: run-python
+description: "List all catalog requests"
+enabled: true
+entry_point: "get_all_requests.py"
