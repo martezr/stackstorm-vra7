@@ -1,1 +1,1 @@
-empty
+-e git+https://github.com/tomkuba/vRAAPIClient.git#egg=vRAAAPIClient

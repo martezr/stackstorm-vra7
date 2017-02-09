@@ -1,5 +1,5 @@
 from lib import action
 
-class GetAllRequests(action.JenkinsBaseAction):
+class GetAllRequests(action.vRealizeAutomationAction):
     def run(self):
         return self.vra7.getAllRequests()
