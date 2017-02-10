@@ -1,0 +1,22 @@
+---
+name: "get_resource_by_name"
+pack: "vra7"
+description: "Get resource by name"
+action_ref: "vra7.get_resource_by_name"
+ack:
+  enabled: false
+formats:
+  - "get details about {{resourceName}}"
+  - "tell me about {{resourceName}}"
+result:
+  format: |
+    {% if execution.status == 'succeeded' %}
+    {% for item in execution.result.result %}
+    Request: {{item.requestNumber}}  
+    State:   {{item.state}}  
+    Item:    {{item.requestedItemName}}
+
+    {% endfor %}
+    {% else %}
+    {{execution.result.stdout}}{~}
+    {% endif %}
