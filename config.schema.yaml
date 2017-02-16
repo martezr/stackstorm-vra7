@@ -1,6 +1,6 @@
 ---
   hostname:
-    description: "FQDN to vRealize Automation 7 API endpoint (e.x.: https://vrealize.mycompany.org)"
+    description: "FQDN to vRealize Automation 7 API endpoint (e.x.: vrealize.mycompany.org)"
     type: "string"
     secret: false
     required: true

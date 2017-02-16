@@ -8,7 +8,7 @@ class vRealizeAutomationAction(Action):
         self.vra7 = self._get_client()
 
     def _get_client(self):
-        url = self.config['hostname']
+        hostname = self.config['hostname']
         username = self.config['username']
         password = self.config['password']
         tenant = self.config['tenant']
