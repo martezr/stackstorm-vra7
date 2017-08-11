@@ -29,10 +29,10 @@ p = subprocess.Popen(["st2", "key", "set", "vra7_password", p1, "--encrypt"],
 cmdoutput, err = p.communicate()
 
 config = open(configfile, 'w')
-config.write("hostname: " + str(hostname) + "\n")
-config.write("username: " + str(username) + "\n")
-config.write("password: {{st2kv.system.vra7_password}}" + "\n")
-config.write("tenant: " + str(tenantvalue) + "\n") 
+config.write("hostname: " + '"' + str(hostname) + '"' + "\n")
+config.write("username: " + '"' + str(username) + '"' + "\n")
+config.write('password: "{{st2kv.system.vra7_password}}"' + "\n")
+config.write("tenant: " + '"' + str(tenantvalue) + '"' + "\n") 
 config.write("verify_ssl: " + str(verifyssl) + "\n")
 config.close
 
